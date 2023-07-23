@@ -9,7 +9,7 @@
     <meta name="MobileOptimized" content="176" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="robots" content="noindex, nofollow" />
-    <script src="/static/telegram-web-app.js?21"></script>
+    <script src="telegram-web-app.js?21"></script>
     <script>
         function setThemeClass() {
             document.documentElement.className = Telegram.WebApp.colorScheme;
@@ -24,7 +24,7 @@
             return JSON.parse(request.responseText);
         }
     </script>
-    <link href="/static/cafe.css?20" rel="stylesheet">
+    <link href="cafe.css?20" rel="stylesheet">
 </head>
 <body style="display:none">
     <section class="cafe-page cafe-items" id="cafe_items">
@@ -58,7 +58,7 @@
         var cafeOrderItems = document.getElementById("cafe_order_items");
         //var lastOrderItem = document.getElementById("last_order_item");
 
-        var food_items = getJson("/static/food_items.json");
+        var food_items = getJson("food_items.json");
 
         function parseItem(i) {
             var cafeItem = document.createElement("div");
@@ -161,9 +161,9 @@
     <div class="cafe-status-wrap">
         <div class="cafe-status js-status"></div>
     </div>
-    <script src="/static/jquery.min.js"></script>
-    <script src="/static/cafe.js?25"></script>
-    <script src="/static/tgsticker.js?29"></script>
+    <script src="jquery.min.js"></script>
+    <script src="cafe.js?25"></script>
+    <script src="tgsticker.js?29"></script>
     <script>
         /*Telegram.WebApp.ready();
 

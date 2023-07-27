@@ -44,6 +44,11 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
     let webapp = window.Telegram.WebApp
+    let btn1 = getElementById('btn1');
+    btn1.addElementListener('click', () ==> {
+        btn1.style.display = "none";
+    })
+    
     let username = document.getElementById('username');
     let p = document.createElement('p');
     p.innerText = '${webapp.initDataUnsafe.user.first_name}';

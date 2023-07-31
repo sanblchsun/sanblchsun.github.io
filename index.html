@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <div class="username" id="username">
+    <div id="username">
     </div>
 <div id="message">
   <p>message...</p>
@@ -49,9 +49,7 @@
         btn1.style.display = "none";
 
         let username = document.getElementById("username");
-        let p = document.createElement("p");
-        p.value = webapp.initDataUnsafe.user.first_name;
-        username.appendChild(p);
+        username.value = webapp.initDataUnsafe.user.first_name;
     })
 
 

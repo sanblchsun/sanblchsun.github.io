@@ -47,12 +47,14 @@
     let btn1 = document.getElementById("btn1");
     btn1.addEventListener("click", () => {
         btn1.style.display = "none";
+
+        let username = document.getElementById("username");
+        let p = document.createElement("p");
+        p.value = webapp.initDataUnsafe.user.first_name;
+        username.appendChild(p);
     })
-    
-    let username = document.getElementById('username');
-    let p = document.createElement('p');
-    p.innerText = '${webapp.initDataUnsafe.user.first_name}';
-    username.appendChild(p);
+
+
 
     
     const $message = document.querySelector('#message');

@@ -51,21 +51,21 @@
         let username = document.getElementById("username");
         let name = webapp.initDataUnsafe.user.first_name
         username.value = name
-        
-        const $message = document.querySelector('#message');
+
+        let message = document.querySelector('#message');
         // вставим строку «before» перед $message
-        $message.before('before');
+        message.before('before');
         // вставим строку «after» перед $message
-        $message.after('after');
+        message.after('after');
 
-        const $p1 = document.createElement('p');
-        $p1.textContent = 'prepend';
+        let p1 = document.createElement('p');
+        p1.textContent = 'prepend';
         // вставим элемент $p1 в начало $message
-        $message.prepend($p1);
+        message.prepend(p1);
 
-        const $p2 = document.createElement('p');
-        $p2.textContent = 'append' + " " + name;
-        $message.append($p2);
+        let p2 = document.createElement('p');
+        p2.textContent = 'append' + " " + name;
+        message.append(p2);
     })
 </script>
     

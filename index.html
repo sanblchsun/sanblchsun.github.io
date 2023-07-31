@@ -50,9 +50,9 @@
 
         let username = document.getElementById("username");
         let name = webapp.initDataUnsafe.user.first_name
-        username.value.set = name
+        username.value = name
         const $p2 = document.createElement('p');
-        $p2.textContent = name;
+        $p2.textContent = 'append' + ' ' + name;
         $message.append($p2);
     })
 

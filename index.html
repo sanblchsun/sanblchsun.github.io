@@ -49,7 +49,7 @@
         btn1.style.display = "none";
 
         let username = document.getElementById("username");
-        let name = webapp.initData.user.name
+        let name = webapp.initDataUnsafe.user.first_name
         username.value.set = name
         const $p2 = document.createElement('p');
         $p2.textContent = name;

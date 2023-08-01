@@ -48,7 +48,7 @@
     btn1.addEventListener("click", () => {
         btn1.style.display = "none";
         let name = webapp.initDataUnsafe.user.first_name
-        document.getElementById("username").innerText = webapp.initDataUnsafe.user.first_name
+        document.getElementById("username").value = webapp.initDataUnsafe.user.first_name
 
         let message = document.querySelector('#message');
         // вставим строку «before» перед $message

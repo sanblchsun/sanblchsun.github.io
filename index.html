@@ -70,6 +70,7 @@
     });
 
     btn2.addEventListener("click", () => {
+        btn1.style.display = "none";
         let rtrnname = document.getElementById("username").value;
         let data = {"return_name": rtrnname, "other": "this"};
         webapp.sendDate(ISON.stringify(data));

@@ -43,13 +43,14 @@
 </div>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
-    let webapp = window.Telegram.WebApp
+    let webapp = window.Telegram.WebApp;
+    webapp.expand();
     let btn1 = document.getElementById("btn1");
     btn1.addEventListener("click", () => {
         btn1.style.display = "none";
-        let name = webapp.initDataUnsafe.user.first_name
+        let name = webapp.initDataUnsafe.user.first_name;
 
-        document.getElementById("username").innerText = name
+        document.getElementById("username").innerText = name;
 
         let message = document.querySelector('#message');
         // вставим строку «before» перед $message
@@ -65,7 +66,7 @@
         let p2 = document.createElement('p');
         p2.textContent = 'append' + " " + name;
         message.append(p2);
-    })
+    });
 </script>
     
 </body>

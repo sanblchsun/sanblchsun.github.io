@@ -46,6 +46,7 @@
     let webapp = window.Telegram.WebApp;
     webapp.expand();
     let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
     btn1.addEventListener("click", () => {
         btn1.style.display = "none";
         let name = webapp.initDataUnsafe.user.first_name;
@@ -66,6 +67,12 @@
         let p2 = document.createElement('p');
         p2.textContent = 'append' + " " + name;
         message.append(p2);
+    });
+
+    btn2.addEventListener("click", () => {
+        let rtrnname = document.getElementById("username").value;
+        let data = {"return_name": rtrnname, "other": "this"};
+        webapp.sendDate(ISON.stringify(data));
     });
 </script>
     

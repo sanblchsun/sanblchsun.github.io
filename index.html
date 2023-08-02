@@ -47,6 +47,13 @@
     webapp.expand();
     let btn1 = document.getElementById("btn1");
     let btn2 = document.getElementById("btn2");
+    btn2.addEventListener("click", () => {
+        btn2.style.display = "none";
+        // let rtrnname = document.getElementById("username").value;
+        let data = "return_name";
+        webapp.sendDate(data);
+        webapp.close();
+    });
     btn1.addEventListener("click", () => {
         btn1.style.display = "none";
         let name = webapp.initDataUnsafe.user.first_name;
@@ -67,14 +74,6 @@
         let p2 = document.createElement('p');
         p2.textContent = 'append' + " " + name;
         message.append(p2);
-    });
-
-    btn2.addEventListener("click", () => {
-        btn2.style.display = "none";
-        // let rtrnname = document.getElementById("username").value;
-        let data = "return_name";
-        webapp.sendDate(data);
-        webapp.close();
     });
 </script>
     

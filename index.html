@@ -49,8 +49,8 @@
     let btn2 = document.getElementById("btn2");
     btn2.addEventListener("click", () => {
         btn2.style.display = "none";
-        // let rtrnname = document.getElementById("username").value;
-        webapp.sendData("1111111111");
+        let rtrnname = document.getElementById("username").value;
+        webapp.sendData("rtrnname");
         webapp.close();
     });
     btn1.addEventListener("click", function() {

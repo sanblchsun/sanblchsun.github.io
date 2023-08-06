@@ -66,8 +66,8 @@
         }
     });
 
-    btn4.addEventListener('click', function(){
-        if (webapp.MainButton.isActiv) {
+    btn4.addEventListener('click', () => {
+        if (webapp.MainButton.isActive) {
             webapp.MainButton.setParams({"color": "#bd2222"});
             webapp.MainButton.disable()
         }

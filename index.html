@@ -47,13 +47,37 @@
     webapp.expand();
     let btn1 = document.getElementById("btn1");
     let btn2 = document.getElementById("btn2");
+    let btn3 = document.getElementById("btn3");
+    let btn4 = document.getElementById("btn4");
+
     btn2.addEventListener("click", () => {
         btn2.style.display = "none";
         let rtrnname = document.getElementById("username").value;
         webapp.sendData('rtrnname');
         webapp.close();
     });
-    btn1.addEventListener("click", function() {
+
+    btn3.addEventListener('click', () => {
+        if (webapp.MainButton.isVisible) {
+            webapp.MainButton.hide()
+        }
+        else {
+            webapp.MainButton.show()
+        }
+    });
+
+    btn4.addEventListener('click', () => {
+        if (webapp.MainButton.isActiv) {
+            webapp.MainButton.setParams({"color": "#E0FFFF"});
+            webapp.MainButton.disable()
+        }
+        else {
+            webapp.MainButton.setParams({"color": "#143F6B"});
+            webapp.MainButton.enable()
+        }
+    });
+
+    btn1.addEventListener("click", () => {
         btn1.style.display = "none";
         let name = webapp.initDataUnsafe.user.first_name;
 
@@ -74,7 +98,8 @@
         p2.textContent = 'append' + " " + name;
         message.append(p2);
     });
-    Telegram.WebApp.onEvent("mainButtonClicked", function() {
+
+    Telegram.WebApp.onEvent("mainButtonClicked", () => {
         webapp.sendData("Hello from Web")
     });
 </script>

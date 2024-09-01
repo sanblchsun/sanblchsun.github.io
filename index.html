@@ -1,108 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Оплата</title>
-</head>
-<body>
-    <div class="container">
-        <div class="inner">
-            <div class="item">
-                <img src="1.jpg" alt="Burger" class="img">
-                <button class="btn" id="btn1">Add</button>
-            </div>
-            <div class="item">
-                <img src="1.jpg" alt="Burger" class="img">
-                <button class="btn" id="btn2">Add</button>
-            </div>
-            <div class="item">
-                <img src="1.jpg" alt="Burger" class="img">
-                <button class="btn" id="btn3">Add</button>
-            </div>
-            <div class="item">
-                <img src="1.jpg" alt="Burger" class="img">
-                <button class="btn" id="btn4">Add</button>
-            </div>
-<!--            <div class="item">-->
-<!--                <img src="1.jpg" alt="Burger" class="img">-->
-<!--                <button class="btn" id="btn5">Add</button>-->
-<!--            </div>-->
-<!--            <div class="item">-->
-<!--                <img src="1.jpg" alt="Burger" class="img">-->
-<!--                <button class="btn" id="btn6">Add</button>-->
-<!--            </div>-->
-        </div>
-    </div>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mы рады всем гостям"</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>АГЕНТСТВО ОСОБЕННЫХ СОБЫТИЙ</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#Events">Мероприятия</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div id="username">
-    </div>
-<div id="message">
-  <p>message...</p>
-</div>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script>
-    let webapp = window.Telegram.WebApp;
-    webapp.expand();
-    let btn1 = document.getElementById("btn1");
-    let btn2 = document.getElementById("btn2");
-    let btn3 = document.getElementById("btn3");
-    let btn4 = document.getElementById("btn4");
+    <section id="about">
+      <h2>О нас</h2>
+      <p>
+        Мы - не просто свадебное агентство. Мы - агентство семейных событий. Будем рады сопровождать все важные для вас даты, организовывая события на протяжении всей
+жизни. Дни рождения и юбилеи, выпускные и новоселья. свадьбы и рождения детей - все эти события мы поможем вам провести в вашем стиле, в приятной обстановке, в окружении близких вам людей.
+      </p>
+      <img src="img/osn600x300.png" alt="Образование" />
+    </section>
 
-    btn2.addEventListener("click", () => {
-        btn2.style.display = "none";
-        let rtrnname = document.getElementById("username").value;
-        webapp.sendData('rtrnname');
-        webapp.close();
-    });
+    <section id="Events">
+      <h2>Мероприятия</h2>
+      <ul>
+        <li>Мероприятия 1</li>
+        <li>Мероприятия 2</li>
+        <li>Мероприятия 3</li>
+        <li>Мероприятия 4</li>
+      </ul>
+    </section>
 
-    btn3.addEventListener('click', () => {
-        if (webapp.MainButton.isVisible) {
-            webapp.MainButton.hide()
-        }
-        else {
-            webapp.MainButton.show()
-        }
-    });
+    <section id="contact">
+      <h2>Контакты</h2>
+      <address>
+        <p><strong>Адрес:</strong> г. Москва, ул. Улица , 123</p>
+        <p><strong>Телефон:</strong> +7 (499) 111-60-20</p>
+        <p><strong>Email:</strong> events@ya.ru</p>
+      </address>
+    </section>
 
-    btn4.addEventListener('click', () => {
-        if (webapp.MainButton.isActive) {
-            webapp.MainButton.setParams({"color": "#bd2222"});
-            webapp.MainButton.disable()
-        }
-        else {
-            webapp.MainButton.setParams({"color": "#2a6b14"});
-            webapp.MainButton.enable()
-        }
-    });
-
-    btn1.addEventListener("click", () => {
-        btn1.style.display = "none";
-        let name = webapp.initDataUnsafe.user.first_name;
-
-        document.getElementById("username").innerText = name;
-
-        let message = document.querySelector('#message');
-        // вставим строку «before» перед $message
-        message.before('before');
-        // вставим строку «after» перед $message
-        message.after('after');
-
-        let p1 = document.createElement('p');
-        p1.textContent = 'prepend';
-        // вставим элемент $p1 в начало $message
-        message.prepend(p1);
-
-        let p2 = document.createElement('p');
-        p2.textContent = 'append' + " " + name;
-        message.append(p2);
-    });
-
-    Telegram.WebApp.onEvent("mainButtonClicked", () => {
-        webapp.sendData("Hello from Web")
-    });
-</script>
-
-</body>
+    <footer>
+      <p>&copy;Все права защищены.</p>
+    </footer>
+  </body>
 </html>
